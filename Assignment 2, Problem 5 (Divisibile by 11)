@@ -1,0 +1,21 @@
+#Problem 5
+#Linfeng Li
+x = input("Enter a number: ")
+if (not(x.isdigit()) and (not x.startswith('-') and (not x[-1:].isdigit()))):
+    print("This is invalid input")
+number = int(x)
+Sum = 0
+Flag = True
+
+for char in str(abs(number)):
+    digit = int(char)
+    if(Flag):
+        Sum += digit
+    else:
+        Sum -= digit
+    Flag = not Flag
+
+if (Sum % 11 == 0):
+    print(f"{number} is divisible by 11")
+else:
+    print(f"{number} is not divisible by 11")
