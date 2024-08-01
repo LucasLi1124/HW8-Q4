@@ -1,0 +1,16 @@
+import problem3
+
+#Key 11: believe you can and you are halfway there
+
+
+
+encrypted_message = "mpwtpgp jzf nly lyo jzf lcp slwqhlj espcp"
+def crack_caesar_cipher(encrypted_message):
+    for key in range(1, 26):
+        decrypted_message = problem3.caesar_decrypt(key, encrypted_message)
+        print(f"Key {key}: {decrypted_message}")
+
+
+
+
+crack_caesar_cipher(encrypted_message)
